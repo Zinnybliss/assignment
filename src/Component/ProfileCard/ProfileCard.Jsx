@@ -1,11 +1,11 @@
-import './Profile.Css'
+// import './Profile.Css'
 
 
 const ProfileCard = (props) => {
     return(
         <>
         <div>
-            <img>{props.profileImage}</img>
+            <img src={props.src} alt={props.altText} style={{ width: '200px', height: 'auto' }} />
             <p>{props.name}</p>
             <p>{props.age}</p>
             <p>{props.location}</p>
@@ -15,4 +15,4 @@ const ProfileCard = (props) => {
 }
 
 
-export default ProfileCard
+export default ProfileCard;
