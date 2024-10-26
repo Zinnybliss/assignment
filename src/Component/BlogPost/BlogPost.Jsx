@@ -1,18 +1,22 @@
-import './BlogPost.Css'
-
+import './BlogPost.css'
 
 const BlogPost = (props) => {
-    return(
-        <>
-        <div>
-            <h2>{props.title}</h2>
-            <p>{props.content}</p>
-            <p>{props.author}</p>
-            <p>{props.date}</p>
-        </div>
-        </>
-    )
-}
+    const { title, author, content, date } = props;
+  
+    const formattedDate = new Date(date).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+  
+    return (
+      <div className="blog-post">
+        <h2>{title}</h2>
+        <p><em>By {author} on {formattedDate}</em></p>
+        <p>{content}</p>
+      </div>
+    );
+  };
 
 
 export default BlogPost;

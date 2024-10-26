@@ -1,11 +1,11 @@
-// import './Profile.Css'
+import './Product.css'
 
 
 const Product = (props) => {
     return(
         <>
 <div>
-    <img src={props.src} alt={props.altText} style={{ width: '200px', height: 'auto' }}/>
+    <img src={props.src} alt={props.altText} className="product-image" />
     <p>{props.productName}</p>
     <p>{props.description}</p>
     <p>{props.price}</p>
